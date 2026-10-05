@@ -1,16 +1,54 @@
-# React + Vite
+# JavaScript Compiler
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A browser-based JavaScript playground 
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- JavaScript editing with Monaco
+- Run code with the **Run** button or **Ctrl/⌘ + Enter**
+- View console output, errors, and execution status
+- Stop execution, clear output, and isolate code in a Web Worker
+- Responsive interface styled with Tailwind CSS v4
 
-## React Compiler
+## Dependencies
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React and React DOM
+- Monaco Editor (`@monaco-editor/react`)
+- Vite and the React plugin
+- Tailwind CSS v4 with its Vite plugin
+- Oxlint
 
-## Expanding the Oxlint configuration
+## Project structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```text
+src/
+├── assets/             Static assets
+├── components/         Code editor and console UI
+├── hooks/              JavaScript execution hook
+├── lib/                Console value formatting
+├── workers/            Isolated JavaScript worker
+├── App.jsx             Main application
+├── index.css           Tailwind CSS entry
+└── main.jsx            Application entry point
+index.html
+vite.config.js
+package.json
+```
+
+## Getting started
+
+```sh
+npm install
+npm run dev
+```
+
+Press **Run** or **Ctrl/⌘ + Enter** to execute code.
+
+## Available commands
+
+```sh
+npm run dev
+npm run build
+npm run preview
+npm run lint
+```
