@@ -1,7 +1,6 @@
-# JavaScript Compiler
+# JavaScript Playground
 
-A browser-based JavaScript playground 
-
+- Built a browser-based JavaScript code editor and execution environment using React and Web Workers.
 ## Features
 
 - JavaScript editing with Monaco
